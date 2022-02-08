@@ -32,14 +32,6 @@ const MenuEsquerda = () => {
         <Container>
             <Wrap>
                 <Lista>
-                    <Item><Us /> Inglês</Item>
-                    <Item><Br /> Português</Item>
-                    <Item><Fr /> Francês</Item>
-                    <Item><It /> Italiano</Item>
-                    <Item><De /> Alemão</Item>
-                    <Item><Cn /> Chinês</Item>
-                    <Item><Jp /> Japonês</Item>
-                    
                     <Item><ForumIcon /> Bate-papo</Item>
                     <Item><DynamicFeedIcon /> Mural</Item>
                     <Item><PsychologyIcon /> Gramática</Item>
@@ -49,6 +41,19 @@ const MenuEsquerda = () => {
                 </Lista>
 
                 <Botao>Exibir Mais</Botao>
+
+                <BarraHorizontal />
+
+                <Lista>
+                    <Item><Us /> Inglês</Item>
+                    <Item><Br /> Português</Item>
+                    <Item><Es /> Espanhol</Item>
+                    <Item><Fr /> Francês</Item>
+                    <Item><It /> Italiano</Item>
+                    <Item><De /> Alemão</Item>
+                    <Item><Cn /> Chinês</Item>
+                    <Item><Jp /> Japonês</Item>
+                </Lista>
 
                 <BarraHorizontal />
 

@@ -23,8 +23,10 @@ export const Container = styled.div`
 
 
 export const Wrap = styled.div`
-    padding: 20px;
     background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 
@@ -32,12 +34,18 @@ export const Lista = styled.ul`
     list-style: none;
     margin: 0;
     padding: 0;
+    width: 100%;
 `;
 
 export const Item = styled.li`
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #fdfdfd;
+    }
 
     & > svg {
         margin-right: 10px;
@@ -51,6 +59,7 @@ export const Botao = styled.button`
     padding: 10px;
     border-radius: 5px;
     font-weight: 500;
+    cursor: pointer;
 `;
 
 export const BarraHorizontal = styled.hr`
@@ -61,6 +70,7 @@ export const ListaAmigos = styled.ul`
     list-style: none;
     margin: 0;
     padding: 0;
+    width: 100%;
 `;
 
 export const Amigo = styled.li`

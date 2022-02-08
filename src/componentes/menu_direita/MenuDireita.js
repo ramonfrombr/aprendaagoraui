@@ -2,22 +2,38 @@ import React from 'react'
 import {
     Container,
     Wrap,
+
     ContainerAniversario,
     ImagemAniversario,
     TextoAniversario,
     Propaganda,
     Titulo,
-    ListaAmigos,
+    ListaAmigosOnline,
+
+    InfoContainer,
+    InfoItem,
+    InfoChave,
+    InfoValor,
+
+    ListaAmigos
 } from './MenuDireitaElementos'
 
 import AmigoOnline from '../amigo_online/AmigoOnline'
 
+import Amigo from './Amigo';
+
 import {Usuarios} from '../../dados'
 
-const MenuDireita = () => {
-    return (
-        <Container>
-            <Wrap>
+
+
+
+
+
+const MenuDireita = ({ perfil }) => {
+
+    const MenuDireitaInicio = () => {
+        return (
+            <>
                 <ContainerAniversario>
                     <ImagemAniversario
                         src="/assets/presente.png"
@@ -34,7 +50,7 @@ const MenuDireita = () => {
 
                 <Titulo>Amigos Online</Titulo>
 
-                <ListaAmigos>
+                <ListaAmigosOnline>
 
                     {Usuarios.map((amigo) => (
                         <AmigoOnline
@@ -43,7 +59,52 @@ const MenuDireita = () => {
                         />
                     ))}
 
+                </ListaAmigosOnline>
+            </>
+        )
+    }
+
+    const MenuDireitaPerfil = () => {
+
+        return (
+            <>
+                <Titulo>Informação do Usuário</Titulo>
+
+                <InfoContainer>
+
+                    <InfoItem>
+                        <InfoChave>Cidade:</InfoChave>
+                        <InfoValor>Rio de Janeiro</InfoValor>
+                    </InfoItem>
+
+                    <InfoItem>
+                        <InfoChave>De:</InfoChave>
+                        <InfoValor>Serra</InfoValor>
+                    </InfoItem>
+
+                    <InfoItem>
+                        <InfoChave>Relacionamento:</InfoChave>
+                        <InfoValor>Solteiro</InfoValor>
+                    </InfoItem>
+                </InfoContainer>
+
+
+                <Titulo>Amigos</Titulo>
+
+                <ListaAmigos>
+                    <Amigo />
+                    <Amigo />
+                    <Amigo />
+                    <Amigo />
                 </ListaAmigos>
+            </>
+        )
+    }
+
+    return (
+        <Container>
+            <Wrap>
+                {perfil ? <MenuDireitaPerfil /> : <MenuDireitaInicio />}
             </Wrap>
         </Container>
     )
